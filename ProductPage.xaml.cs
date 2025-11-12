@@ -23,11 +23,9 @@ namespace _41razmer
         public ProductPage()
         {
             InitializeComponent();
+            var currentProduct = Tuhvatshin41Entities.GetContext().Product.ToList();
+            ProductListView.ItemsSource = currentProduct;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Manager.MainFrame.Navigate(new AddEditPage());
-        }
     }
 }
