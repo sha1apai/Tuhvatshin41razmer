@@ -26,6 +26,27 @@ namespace _41razmer
             var currentProduct = Tuhvatshin41Entities.GetContext().Product.ToList();
             ProductListView.ItemsSource = currentProduct;
         }
+        private void UpdateProducts()
+        {
+            var currentProduct = Tuhvatshin41Entities.GetContext().Product.ToList();
+            if (ComboType.SelectedIndex == 0)
+            {
+                currentProduct = currentProduct.Where(p=>(p.ProductDiscountAmount) >=0 && (p.ProductDiscountAmount)<=100).ToList();
+            }
+        }
+        private void ComboType_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
+        }
+
+        private void RButtonUp_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RButtonDown_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

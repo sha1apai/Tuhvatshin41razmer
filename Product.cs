@@ -32,8 +32,9 @@ namespace _41razmer
         public int ProductQuantityInStock { get; set; }
         public string ProductDescription { get; set; }
         public string ProductPhoto { get; set; }
-
-        public string ProductPhotoPath { get
+        public string ProductPhotoPath
+        {
+            get
             {
                 if (ProductPhoto == null)
                     return null;

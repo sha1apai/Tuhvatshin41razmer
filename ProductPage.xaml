@@ -5,11 +5,31 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:_41razmer"
       mc:Ignorable="d" 
-      d:DesignHeight="850" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="800"
       Title="ProductPage" FontFamily="Comic Sans MS">
 
     <Grid>
-        <ListView Name="ProductListView" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <StackPanel Margin="10" Orientation="Horizontal">
+                <TextBlock Text="Введите название для поиска " TextAlignment="Right" Width="300" FontSize="15"></TextBlock>
+                <ComboBox Name="ComboType" SelectionChanged="ComboType_SelectionChanged" FontSize="15" Width="200">
+                    <TextBlock>Все</TextBlock>
+                    <TextBlock>от 0 до 9,99%</TextBlock>
+                    <TextBlock>от 10 до 14,99%</TextBlock>
+                    <TextBlock>15% и более</TextBlock>
+                </ComboBox>
+            </StackPanel>
+        </WrapPanel>
+        <StackPanel Grid.Row="1" Orientation="Vertical" Margin="5">
+            <RadioButton Content="По возрастанию стоимости" GroupName="Sort" Width="300" FontSize="20" Name="RButtonUp" Checked="RButtonUp_Checked"></RadioButton>
+            <RadioButton Content="По убыванию стоимости" GroupName="Sort" Width="300" FontSize="20" Name="RButtonDown" Checked="RButtonDown_Checked"></RadioButton>
+        </StackPanel>
+        <ListView Name="ProductListView" Grid.Row="2" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>

@@ -65,40 +65,40 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Order.cs">
-      <DependentUpon>TuhvvatshinModel41.tt</DependentUpon>
+      <DependentUpon>TuhvatshinModel41.tt</DependentUpon>
     </Compile>
     <Compile Include="OrderProduct.cs">
-      <DependentUpon>TuhvvatshinModel41.tt</DependentUpon>
+      <DependentUpon>TuhvatshinModel41.tt</DependentUpon>
     </Compile>
     <Compile Include="PickUpPoint.cs">
-      <DependentUpon>TuhvvatshinModel41.tt</DependentUpon>
+      <DependentUpon>TuhvatshinModel41.tt</DependentUpon>
     </Compile>
     <Compile Include="Product.cs">
-      <DependentUpon>TuhvvatshinModel41.tt</DependentUpon>
+      <DependentUpon>TuhvatshinModel41.tt</DependentUpon>
     </Compile>
     <Compile Include="Role.cs">
-      <DependentUpon>TuhvvatshinModel41.tt</DependentUpon>
+      <DependentUpon>TuhvatshinModel41.tt</DependentUpon>
     </Compile>
     <Compile Include="sysdiagrams.cs">
-      <DependentUpon>TuhvvatshinModel41.tt</DependentUpon>
+      <DependentUpon>TuhvatshinModel41.tt</DependentUpon>
     </Compile>
-    <Compile Include="TuhvvatshinModel41.Context.cs">
+    <Compile Include="TuhvatshinModel41.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TuhvvatshinModel41.Context.tt</DependentUpon>
+      <DependentUpon>TuhvatshinModel41.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="TuhvvatshinModel41.cs">
+    <Compile Include="TuhvatshinModel41.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TuhvvatshinModel41.tt</DependentUpon>
+      <DependentUpon>TuhvatshinModel41.tt</DependentUpon>
     </Compile>
-    <Compile Include="TuhvvatshinModel41.Designer.cs">
+    <Compile Include="TuhvatshinModel41.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TuhvvatshinModel41.edmx</DependentUpon>
+      <DependentUpon>TuhvatshinModel41.edmx</DependentUpon>
     </Compile>
     <Compile Include="User.cs">
-      <DependentUpon>TuhvvatshinModel41.tt</DependentUpon>
+      <DependentUpon>TuhvatshinModel41.tt</DependentUpon>
     </Compile>
     <Page Include="AddEditPage.xaml">
       <SubType>Designer</SubType>
@@ -152,12 +152,12 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <EntityDeploy Include="TuhvvatshinModel41.edmx">
+    <EntityDeploy Include="TuhvatshinModel41.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>TuhvvatshinModel41.Designer.cs</LastGenOutput>
+      <LastGenOutput>TuhvatshinModel41.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="TuhvvatshinModel41.edmx.diagram">
-      <DependentUpon>TuhvvatshinModel41.edmx</DependentUpon>
+    <None Include="TuhvatshinModel41.edmx.diagram">
+      <DependentUpon>TuhvatshinModel41.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -169,16 +169,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TuhvvatshinModel41.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TuhvvatshinModel41.edmx</DependentUpon>
-      <LastGenOutput>TuhvvatshinModel41.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="TuhvvatshinModel41.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TuhvvatshinModel41.edmx</DependentUpon>
-      <LastGenOutput>TuhvvatshinModel41.cs</LastGenOutput>
-    </Content>
     <Resource Include="Товар_import\B320R5.jpg" />
     <Resource Include="Товар_import\D329H3.jpg" />
     <Resource Include="Товар_import\D572U8.jpg" />
@@ -189,6 +179,18 @@
     <Resource Include="Товар_import\H782T5.jpg" />
     <Resource Include="Товар_import\J384T6.jpg" />
     <Resource Include="Товар_import\А112Т4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TuhvatshinModel41.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TuhvatshinModel41.edmx</DependentUpon>
+      <LastGenOutput>TuhvatshinModel41.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="TuhvatshinModel41.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TuhvatshinModel41.edmx</DependentUpon>
+      <LastGenOutput>TuhvatshinModel41.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

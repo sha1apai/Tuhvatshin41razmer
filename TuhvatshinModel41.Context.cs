@@ -15,14 +15,6 @@ namespace _41razmer
     
     public partial class Tuhvatshin41Entities : DbContext
     {
-        private static Tuhvatshin41Entities _context;
-
-        public static Tuhvatshin41Entities GetContext()
-        {
-            if(_context == null)
-                _context = new Tuhvatshin41Entities();
-            return _context;
-        }
         public Tuhvatshin41Entities()
             : base("name=Tuhvatshin41Entities")
         {
