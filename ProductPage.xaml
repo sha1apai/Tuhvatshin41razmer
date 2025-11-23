@@ -26,8 +26,9 @@
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <TextBlock Visibility="Visible" Name="TextBlockCount" Grid.Row="0" FontSize="15" HorizontalAlignment="Center"></TextBlock>
-                <TextBox Grid.Row="1" Width="200" FontSize="15" Name="TBoxSearch" TextChanged="TBoxSearch_TextChanged"></TextBox>
+                <TextBlock Name="TextBlockCount" Grid.Row="0" FontSize="20"></TextBlock>
+                <TextBlock Grid.Row="0" FontSize="20" HorizontalAlignment="Right">поиск по наименованию</TextBlock>
+                <TextBox Grid.Row="1" Width="200" FontSize="15" Name="TBoxSearch" TextChanged="TBoxSearch_TextChanged" HorizontalAlignment="Right"></TextBox>
                 <RadioButton Grid.Row="0" Grid.Column="1" Content="По возрастанию стоимости" GroupName="Sort" Width="300" FontSize="20" Name="RButtonUp" Checked="RButtonUp_Checked"></RadioButton>
                 <RadioButton Grid.Row="1" Grid.Column="1" Content="По убыванию стоимости" GroupName="Sort" Width="300" FontSize="20" Name="RButtonDown" Checked="RButtonDown_Checked"></RadioButton>
                 <TextBlock Grid.Row="0" Grid.Column="2" FontSize="20" HorizontalAlignment="Center" >фильтрация по скидке</TextBlock>

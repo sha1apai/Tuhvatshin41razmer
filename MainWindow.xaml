@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_41razmer"
         mc:Ignorable="d"
-        Title="Тухватшин" Height="750" Width="1200" FontFamily="Comic Sans MS" Icon="res/icon.ico">
+        Title="Тухватшин" Height="750" Width="1400" FontFamily="Comic Sans MS" Icon="res/icon.ico">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="75"></RowDefinition>

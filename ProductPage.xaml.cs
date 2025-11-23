@@ -61,7 +61,7 @@ namespace _41razmer
                 currentProduct = currentProduct.OrderBy(p => p.ProductCost).ToList();
             }
             ProductListView.ItemsSource = currentProduct;
-            TextBlockCount.Text = $"{currentProduct.Count} из {allProducts.Count}";
+            TextBlockCount.Text = $"кол-во {currentProduct.Count} из {allProducts.Count}";
         }
         private void ComboType_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
