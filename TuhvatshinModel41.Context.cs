@@ -15,6 +15,14 @@ namespace _41razmer
     
     public partial class Tuhvatshin41Entities : DbContext
     {
+        private static Tuhvatshin41Entities _content;
+
+        public static Tuhvatshin41Entities GetContext()
+        {
+            if( _content == null )
+                _content = new Tuhvatshin41Entities();
+            return _content;
+        }
         public Tuhvatshin41Entities()
             : base("name=Tuhvatshin41Entities")
         {
@@ -27,7 +35,7 @@ namespace _41razmer
     
         public virtual DbSet<Order> Order { get; set; }
         public virtual DbSet<OrderProduct> OrderProduct { get; set; }
-        public virtual DbSet<PickUpPoint> PickUpPoint { get; set; }
+        public virtual DbSet<PickupPoint> PickupPoint { get; set; }
         public virtual DbSet<Product> Product { get; set; }
         public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }

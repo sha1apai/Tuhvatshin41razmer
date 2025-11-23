@@ -30,7 +30,7 @@ namespace _41razmer
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderProduct> OrderProduct { get; set; }
-        public virtual PickUpPoint PickUpPoint { get; set; }
+        public virtual PickupPoint PickupPoint { get; set; }
         public virtual User User { get; set; }
     }
 }

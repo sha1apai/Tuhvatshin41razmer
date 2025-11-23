@@ -70,7 +70,7 @@
     <Compile Include="OrderProduct.cs">
       <DependentUpon>TuhvatshinModel41.tt</DependentUpon>
     </Compile>
-    <Compile Include="PickUpPoint.cs">
+    <Compile Include="PickupPoint.cs">
       <DependentUpon>TuhvatshinModel41.tt</DependentUpon>
     </Compile>
     <Compile Include="Product.cs">

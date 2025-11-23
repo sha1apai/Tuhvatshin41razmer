@@ -12,19 +12,19 @@ namespace _41razmer
     using System;
     using System.Collections.Generic;
     
-    public partial class PickUpPoint
+    public partial class PickupPoint
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public PickUpPoint()
+        public PickupPoint()
         {
             this.Order = new HashSet<Order>();
         }
     
-        public int PickUpPointID { get; set; }
-        public string PickUpPointIndex { get; set; }
-        public string PickUpPointCity { get; set; }
-        public string PickUpPointStreet { get; set; }
-        public int PickUpPointFlat { get; set; }
+        public int PickupPointID { get; set; }
+        public string PickupPoint1 { get; set; }
+        public string PickupPointCity { get; set; }
+        public string PickupPointStreet { get; set; }
+        public int PickupOrderPoint { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Order { get; set; }

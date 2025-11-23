@@ -14,27 +14,37 @@
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <StackPanel Margin="10" Orientation="Horizontal">
-                <TextBlock Text="Введите название для поиска " TextAlignment="Right" Width="300" FontSize="15"></TextBlock>
-                <ComboBox Name="ComboType" SelectionChanged="ComboType_SelectionChanged" FontSize="15" Width="200">
+        <Grid.ColumnDefinitions></Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="1" Orientation="Vertical" Margin="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Visibility="Visible" Name="TextBlockCount" Grid.Row="0" FontSize="15" HorizontalAlignment="Center"></TextBlock>
+                <TextBox Grid.Row="1" Width="200" FontSize="15" Name="TBoxSearch" TextChanged="TBoxSearch_TextChanged"></TextBox>
+                <RadioButton Grid.Row="0" Grid.Column="1" Content="По возрастанию стоимости" GroupName="Sort" Width="300" FontSize="20" Name="RButtonUp" Checked="RButtonUp_Checked"></RadioButton>
+                <RadioButton Grid.Row="1" Grid.Column="1" Content="По убыванию стоимости" GroupName="Sort" Width="300" FontSize="20" Name="RButtonDown" Checked="RButtonDown_Checked"></RadioButton>
+                <TextBlock Grid.Row="0" Grid.Column="2" FontSize="20" HorizontalAlignment="Center" >фильтрация по скидке</TextBlock>
+                <ComboBox Grid.Row="1" Grid.Column="2" Name="ComboType" SelectionChanged="ComboType_SelectionChanged" FontSize="15" Width="200" HorizontalAlignment="Center">
                     <TextBlock>Все</TextBlock>
                     <TextBlock>от 0 до 9,99%</TextBlock>
                     <TextBlock>от 10 до 14,99%</TextBlock>
                     <TextBlock>15% и более</TextBlock>
                 </ComboBox>
-            </StackPanel>
-        </WrapPanel>
-        <StackPanel Grid.Row="1" Orientation="Vertical" Margin="5">
-            <RadioButton Content="По возрастанию стоимости" GroupName="Sort" Width="300" FontSize="20" Name="RButtonUp" Checked="RButtonUp_Checked"></RadioButton>
-            <RadioButton Content="По убыванию стоимости" GroupName="Sort" Width="300" FontSize="20" Name="RButtonDown" Checked="RButtonDown_Checked"></RadioButton>
+            </Grid>
         </StackPanel>
         <ListView Name="ProductListView" Grid.Row="2" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition Width="300"></ColumnDefinition>
                             <ColumnDefinition Width="800"></ColumnDefinition>
                             <ColumnDefinition Width="150"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
@@ -44,7 +54,7 @@
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
-                        <Image Width="200" Grid.Column="0" Stretch="UniformToFill" Grid.RowSpan="4" HorizontalAlignment="Center">
+                        <Image Width="300" Grid.Column="0" Stretch="UniformToFill" Grid.RowSpan="4" HorizontalAlignment="Center">
                             <Image.Source>
                                 <Binding Path="ProductPhotoPath">
                                     <Binding.TargetNullValue>
