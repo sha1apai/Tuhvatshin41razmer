@@ -20,12 +20,33 @@ namespace _41razmer
     /// </summary>
     public partial class ProductPage : Page
     {
-        public ProductPage()
+        public ProductPage(User user)
         {
             InitializeComponent();
             UpdateProducts();
             var currentProduct = Tuhvatshin41Entities.GetContext().Product.ToList();
             ProductListView.ItemsSource = currentProduct;
+            if (user.UserRole == 0) // Гость
+            {
+                TextBlockFIO.Text = "Вы авторизованы как: Гость";
+                TextBlockRole.Text = "Роль: Гость";
+            }
+            else
+            {
+                TextBlockFIO.Text = $"Вы авторизованны как: {user.UserSurname} {user.UserName} {user.UserPatronymic}";
+                switch (user.UserRole)
+                {
+                    case 1:
+                        TextBlockRole.Text = "Роль: Клиент";
+                        break;
+                    case 2:
+                        TextBlockRole.Text = "Роль: Менеджер";
+                        break;
+                    case 3:
+                        TextBlockRole.Text = "Роль: Администратор";
+                        break;
+                }
+            }
         }
         private void UpdateProducts()
         {
@@ -62,6 +83,7 @@ namespace _41razmer
             }
             ProductListView.ItemsSource = currentProduct;
             TextBlockCount.Text = $"кол-во {currentProduct.Count} из {allProducts.Count}";
+
         }
         private void ComboType_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
