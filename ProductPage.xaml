@@ -43,8 +43,14 @@
                     <TextBlock>15% и более</TextBlock>
                 </ComboBox>
             </Grid>
+            <Button Name="OrderBtn" Content="Просмотр заказа" Click="OrderBtn_Click" Visibility="Collapsed" HorizontalAlignment="Left"/>
         </StackPanel>
         <ListView Name="ProductListView" Grid.Row="2" >
+            <ListView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Добавить к заказу" Click="AddToOrderMenuItem_Click"/>
+                </ContextMenu>
+            </ListView.ContextMenu>
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
